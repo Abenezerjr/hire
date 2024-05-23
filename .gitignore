@@ -6,3 +6,4 @@ pyvenv.cfg
 ./Lib
 pyvenv.cfg
 db.sqlite3
+/db.sqlite3
