@@ -5,11 +5,13 @@ from .forms import CreatUserForm
 # Create your views here.
 
 
-def RegistrationForm(request):
-    form=CreatUserForm()
 
-    context={
-        'form':form
-    }
+
+
+def home(request):
+    return render(request,'account/home.html')
+
+def RegistrationForm(request):
+
 
     return render(request,'account/register.html',context)
