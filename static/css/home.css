@@ -1,0 +1,53 @@
+.hero-section{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+}
+.svg-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    stroke: rgba(255,255,255,0.1);
+    mask-image: radial-gradient(100% 100% at top right, white,transparent);
+}
+.svg-section-path{
+    overflow: visible;
+    fill: rgba(31, 41, 55, 0.2);
+}
+.section-hero-svg{
+    position: absolute;
+    left:calc(50% - 4rem);
+    top:2.5rem;
+    z-index:-10;
+    transform: translate3d(0,0,0);
+    filter: blur(1.5rem);
+
+}
+.section-hero-svg-style{
+    position: relative;
+    padding-bottom: calc(100% * (632 / 1108)); /* Aspect ratio calculation */
+    /* Set width */
+     width: 69.25rem;
+    background-image: linear-gradient(to right, #80caff,#4f46e5);
+    opacity: 0.2;
+
+}
+
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .section-hero-svg{
+      left: 48px; /* Replace with pixel value or percentage for large screens */
+      top: calc(50% - 30rem); /* Consider using JavaScript or media queries for calculation */
+    }
+  }
+
+  @media (min-width: 1200px) { /* Adjust breakpoint as needed */
+    .section-hero-svg{
+      left: calc(50% - 24rem); /* Consider using JavaScript or media queries for calculation */
+    }
+  }
