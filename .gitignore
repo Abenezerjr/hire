@@ -7,3 +7,7 @@ pyvenv.cfg
 pyvenv.cfg
 db.sqlite3
 /db.sqlite3
+
+theme/static_src
+theme/static_src
+./theme/static_src
