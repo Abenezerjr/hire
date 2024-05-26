@@ -11,7 +11,16 @@ from .forms import CreatUserForm
 def home(request):
     return render(request,'account/home.html')
 
-def RegistrationForm(request):
+def Registration(request):
+    form=CreatUserForm()
 
+    if request.method == 'POST':
+        form=CreatUserForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context={
+        'form':form
+    }
 
     return render(request,'account/register.html',context)
