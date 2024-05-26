@@ -96,3 +96,12 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
+
+
+document.getElementById('openMenuButton').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.remove('hidden');
+});
+
+document.getElementById('closeMenuButton').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.add('hidden');
+});
