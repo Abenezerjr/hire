@@ -8,8 +8,6 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 
-
-
 def home(request):
     return render(request,'account/home.html')
 
@@ -20,6 +18,7 @@ def Registration(request):
         form=CreatUserForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('login')
 
     context={
         'form':form
@@ -50,3 +49,7 @@ def UserLogin(request):
     }
 
     return render(request, 'account/login.html', context)
+
+def userLogout(request):
+    logout(request)
+    return redirect('login')
