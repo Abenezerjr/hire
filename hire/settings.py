@@ -30,7 +30,9 @@ INSTALLED_APPS = [
     'account',
     'tailwind',
     'theme',
-    'django_browser_reload'
+    'django_browser_reload',
+    'client',
+    'developers',
 ]
 
 AUTH_USER_MODEL='account.CustomUser'
