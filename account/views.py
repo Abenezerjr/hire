@@ -43,7 +43,7 @@ def UserLogin(request):
                 return redirect('home')
             if user is not None and user. is_developer == False:
                 login(request, user)
-                return redirect('register')
+                return redirect('client_home')
     context = {
         'loginForm': form
     }
