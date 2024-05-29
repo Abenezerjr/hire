@@ -40,7 +40,7 @@ def UserLogin(request):
 
             if user is not None and user. is_developer == True:
                 login(request, user)
-                return redirect('home')
+                return redirect('developer_home')
             if user is not None and user. is_developer == False:
                 login(request, user)
                 return redirect('client_home')
