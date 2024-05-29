@@ -27,7 +27,7 @@ class CreatUserForm(UserCreationForm):
             'email':'Email address',
             'firstName':'First Name',
             'lastName':'Last Name',
-            'is_developer': 'Are You a Developer? ',
+            'is_developer': 'Are You a Developer? Went to get Job? ',
 
         }
 

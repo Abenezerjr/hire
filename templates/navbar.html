@@ -32,7 +32,7 @@
         <a href="{% url 'home' %}" class="text-sm font-semibold leading-6 text-white">Home</a>
         <a href="#" class="text-sm font-semibold leading-6 text-white">Expertise</a>
         <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-white">Company</a>
+        <a href="{% url 'client_home' %}" class="text-sm font-semibold leading-6 text-white">Company</a>
       </div>
         {% if request.user.is_authenticated %}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
