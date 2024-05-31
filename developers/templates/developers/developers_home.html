@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load static %}
 
 
 {% block css %}
@@ -9,65 +10,161 @@
 
 {% block content %}
 
-
     <div class="relative isolate">
-      <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
-        <defs>
-          <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-            <path d="M.5 200V.5H200" fill="none" />
-          </pattern>
-        </defs>
-        <svg x="50%" y="-1" class="overflow-visible ">
-          <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-        </svg>
-        <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
-      </svg>
-      <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48" aria-hidden="true">
-        <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
-      </div>
+{#      <svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">#}
+{#        <defs>#}
+{#          <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">#}
+{#            <path d="M.5 200V.5H200" fill="none" />#}
+{#          </pattern>#}
+{#        </defs>#}
+{#        <svg x="50%" y="-1" class="overflow-visible ">#}
+{#          <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />#}
+{#        </svg>#}
+{#        <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />#}
+{#      </svg>#}
+{#      <div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48" aria-hidden="true">#}
+{#        <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>#}
+{#      </div>#}
       <div class="overflow-hidden">
-        <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+        <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32 ">
           <div class="mx-auto max-w-2xl gap-x-2 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-            <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-              <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">We’re changing the way people connect.</h1>
+            <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl  " >
+                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Ready to Code? Join Our <span class="underline decoration-sky-500">Team of Developers</span></h1>
               <p class="relative mt-6 text-lg leading-8 text-white sm:max-w-md lg:max-w-none">Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt mollit id pariatur in voluptate cillum.</p>
               <div class="mt-10 flex items-center gap-x-6">
                 <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
                 <a href="#" class="text-sm font-semibold leading-6 text-white">Live demo <span aria-hidden="true">→</span></a>
               </div>
             </div>
-            <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-              <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+            <div class="mt-0  gap-8 sm:mt-0 sm:justify-center sm:pl-0 lg:mt-0 lg:pl-0">
+              <div class=" w-full h-1/2
+              flex justify-center items-center space-y-2  sm:ml-0 sm:pt-80 lg:order-last lg:pt-4 xl:order-none xl:pt-8">
+
+                  <img src="{% static 'images/atome.png' %}" alt="" class=" w-full  bg-gray-900/5  shadow-lg">
                   <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                </div>
+
               </div>
-              <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
-                <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                </div>
-                <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                </div>
-              </div>
-              <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
-                <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
-                </div>
-                <div class="relative">
-                  <img src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
-                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+    <div class="bg-black py-2 sm:py-2">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 align-">
+      <h2 class=" text-3xl font-bold  text-white sm:text-4xl ">Why Work With Us?</h2>
     </div>
+    <div class="mx-auto mt-12 max-w-2xl sm:mt-20 lg:mt-18 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <div class="flex flex-col">
+          <dt class="text-base font-semibold leading-7 text-white">
+            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
+              </svg>
+            </div>
+           Competitive Pay
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
+            <p class="flex-auto">Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.</p>
+            <p class="mt-6">
+              <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Learn more <span aria-hidden="true">→</span></a>
+            </p>
+          </dd>
+        </div>
+        <div class="flex flex-col">
+          <dt class="text-base font-semibold leading-7 text-white">
+            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-900">
+              <svg width="800px" height="800px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M401.9 584.7h16v16h-16zM385.9 600.7h-16v-16h16v16z m-31.9 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-31.9 0h-16v-16h16v16zM146.1 584.7h16v16h-16zM162.1 569h-16v-15.7h16V569z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V506z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V443z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V380z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V317z m0-31.4h-16v-15.7h16v15.7zM146.1 238.1h16v16h-16zM385.9 254.1h-16v-16h16v16z m-31.9 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-31.9 0h-16v-16h16v16zM401.9 238.1h16v16h-16zM417.9 569h-16v-15.7h16V569z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V506z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V443z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V380z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16v-15.7h16V317z m0-31.4h-16v-15.7h16v15.7zM860.1 682.9h16v16h-16zM844.2 698.9h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-31.9 0h-16v-16h16v16z m-32 0h-16v-16h16v16zM604.3 682.9h16v16h-16zM620.3 667.1h-16v-15.7h16v15.7z m0-31.4h-16V620h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V557h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V494h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V431h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V368h16v15.7zM604.3 336.2h16v16h-16zM844.2 352.2h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-32 0h-16v-16h16v16z m-31.9 0h-16v-16h16v16z m-32 0h-16v-16h16v16zM860.1 336.2h16v16h-16zM876.1 667.1h-16v-15.7h16v15.7z m0-31.4h-16V620h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V557h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V494h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V431h16v15.7z m0-31.5h-16v-15.7h16v15.7z m0-31.5h-16V368h16v15.7z" fill="#0A0408" /><path d="M246.9 107.8h531.6v531.6H246.9z" fill="#FFFFFF" /><path d="M786.5 647.4H238.9V99.8h547.6v547.6z m-531.6-16h515.6V115.8H254.9v515.6z" fill="#0A0408" /><path d="M305.1 166h415.1v415.1H305.1z" fill="#55B7A8" /><path d="M389.9 238.2h195.3v16H389.9zM384.6 338.8h256.2v16H384.6zM384.6 441.2h256.2v16H384.6z" fill="#0A0408" /><path d="M868.8 918H156.5l-50-415.4h812.3z" fill="#FFFFFF" /><path d="M875.9 926H149.4L97.5 494.6h830.4l-52 431.4z m-712.3-16h698.1l48.1-399.4H115.5L163.6 910z" fill="#0A0408" /><path d="M809.6 866.5H215.8L174.1 554h677.2z" fill="#F4BE6F" /><path d="M154.1 639.7h154.3v16H154.1zM154.1 717.9h258.3v16H154.1z" fill="#FFFFFF" /><path d="M842.7 318.8h50.9v50.9h-50.9z" fill="#DC444A" /><path d="M901.6 377.7h-66.9v-66.9h66.9v66.9z m-50.9-16h34.9v-34.9h-34.9v34.9z" fill="#0A0408" /><path d="M128.6 220.8h50.9v50.9h-50.9z" fill="#DC444A" /><path d="M187.5 279.7h-66.9v-66.9h66.9v66.9z m-50.9-16h34.9v-34.9h-34.9v34.9z" fill="#0A0408" /></svg>
+            </div>
+            Pick Your Passion Projects
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
+            <p class="flex-auto">Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.</p>
+            <p class="mt-6">
+              <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Learn more <span aria-hidden="true">→</span></a>
+            </p>
+          </dd>
+        </div>
+        <div class="flex flex-col">
+          <dt class="text-base font-semibold leading-7 text-white">
+            <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-500">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+              </svg>
+            </div>
+           No Sales Hassle
+          </dt>
+          <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
+            <p class="flex-auto">Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.</p>
+            <p class="mt-6">
+              <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">Learn more <span aria-hidden="true">→</span></a>
+            </p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+{#    <----How TO---->#}
+    <div class="bg-black py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div>
+        <h2 class="text-base font-semibold leading-7 text-indigo-400">Everything you need</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Vetting Process: A Friendly Heads-Up!</p>
+        <p class="mt-6 text-base leading-7 text-gray-200">
+            We're on the lookout for the best. Our vetting process is as easy as pie,
+            albeit a very selective pie. It’s a mix of showcasing your skills,
+            a chat about your ambitions, and a virtual handshake.
+            We aim to ensure a perfect fit for you and our clients.</p>
+      </div>
+      <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
+        <div class="relative pl-9">
+          <dt class="font-semibold text-white">
+            <svg class="absolute left-0 top-1 h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Invite team members
+          </dt>
+          <dd class="mt-2">Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.</dd>
+        </div>
+        <div class="relative pl-9">
+          <dt class="font-semibold text-white">
+            <svg class="absolute left-0 top-1 h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Notifications
+          </dt>
+          <dd class="mt-2">Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.</dd>
+        </div>
+        <div class="relative pl-9">
+          <dt class="font-semibold text-white">
+            <svg class="absolute left-0 top-1 h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Boards
+          </dt>
+          <dd class="mt-2">Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.</dd>
+        </div>
+        <div class="relative pl-9">
+          <dt class="font-semibold text-white">
+            <svg class="absolute left-0 top-1 h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Reporting
+          </dt>
+          <dd class="mt-2">Eos laudantium repellat sed architecto earum unde incidunt. Illum sit dolores voluptatem.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 
