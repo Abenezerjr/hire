@@ -8,3 +8,6 @@ def client_home(request):
 
 def choose_developer(request):
     return render(request,'client/choose.html')
+
+def choose_step_2(request):
+    return render(request,'client/choose-step2.html')
