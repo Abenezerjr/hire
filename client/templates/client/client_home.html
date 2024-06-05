@@ -27,26 +27,68 @@
 
       <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Let's find your developers</h1>
 
-            <div class="mt-14 gap-x-2 flex justify-start md:justify-center sm:flex-row">
+{#            <div class="mt-14 gap-x-2 flex justify-start md:justify-center sm:flex-row">#}
+{##}
+{#                <button  type="submit"#}
+{#                         class="rounded-md bg-indigo-500 px-3#}
+{#                         text-sm font-semibold text-white shadow-sm#}
+{#                          hover:bg-indigo-400 focus-visible:outline#}
+{#                          focus-visible:outline-2#}
+{#                          focus-visible:outline-offset-2#}
+{#                          focus-visible:outline-indigo-400">submit</button>#}
+{#      <form class="mt-6 sm:flex sm:max-w-md lg:mt-0">#}
+{#        <input type="email" name="email-address" id="email-address" autocomplete="email"#}
+{#               required class="w-64 min-w-0 appearance-none rounded-md border-0#}
+{#               bg-black px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset#}
+{#               ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset#}
+{#               focus:ring-indigo-500 sm:w-64 sm:text-sm sm:leading-6" placeholder="Enter your working  email">#}
+{##}
+{##}
+{#      </form>#}
+{##}
+{#    </div>#}
+        <div class="flex min-h-full flex-col justify-center px-6 py-4 lg:px-8">
+            <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6" action="#" method="POST">
+              <div>
+        <label for="email" class="block text-sm font-medium leading-6 text-white">Full Name:</label>
+        <div class="mt-2">
+          <input id="name" name="name" type=texte"  placeholder="FullName" required class="appearance-none block w-full bg-black text-white border border-gray-200
+       rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic">
+        </div>
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium leading-6 text-white">Working Email</label>
+        <div class="mt-2">
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="Working Email"
+                 class="appearance-none block w-full bg-black text-white border border-gray-200
+       rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic">
+        </div>
+      </div>
 
-                <button  type="submit"
-                         class="rounded-md bg-indigo-500 px-3
-                         text-sm font-semibold text-white shadow-sm
-                          hover:bg-indigo-400 focus-visible:outline
-                          focus-visible:outline-2
-                          focus-visible:outline-offset-2
-                          focus-visible:outline-indigo-400">submit</button>
-      <form class="mt-6 sm:flex sm:max-w-md lg:mt-0">
-        <input type="email" name="email-address" id="email-address" autocomplete="email"
-               required class="w-64 min-w-0 appearance-none rounded-md border-0
-               bg-black px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset
-               ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset
-               focus:ring-indigo-500 sm:w-64 sm:text-sm sm:leading-6" placeholder="Enter your working  email">
+      <div>
+        <div class="flex items-start justify-between">
+          <label  class="block text-sm font-medium leading-6 text-white">PhoneNumber</label>
+        </div>
+        <div class="mt-2">
+          <input type="tel" id="phone" name="phone"  placeholder="Phone number" required  class="
+          appearance-none block w-full bg-black text-white border border-gray-200
+       rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic">
+        </div>
+      </div>
 
+      <div>
+        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">submit</button>
+      </div>
+    </form>
 
-      </form>
+{#    <p class="mt-10 text-center text-sm text-gray-500">#}
+{#      Not a member?#}
+{#      <a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Start a 14 day free trial</a>#}
+{#    </p>#}
+  </div>
+</div>
 
-    </div>
 
 
     </div>
@@ -58,7 +100,17 @@
 
   </div>
 </div>
-
+  <script>
+        // This script is for additional feedback to the user
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function () {
+            if (phoneInput.validity.patternMismatch) {
+                phoneInput.setCustomValidity('Please enter a phone number in the format: 123-456-7890');
+            } else {
+                phoneInput.setCustomValidity('');
+            }
+        });
+    </script>
 
 
 
