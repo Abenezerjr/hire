@@ -4,10 +4,7 @@
 
 
 {% block content %}
-
-
-
-<section class="bg-black dark:text-gray-800">
+    <section class="bg-black dark:text-gray-800">
 	<div class="container flex flex-col justify-center px-12 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
 
         <form class="mt-32">
@@ -32,29 +29,29 @@
     </div>
   </fieldset>
 <div class="mt-14">
-              <label class="text-base font-semibold text-white">Current employees in your company?</label>
+              <label class="text-base font-semibold text-white">Experience Requirement ?</label>
   <p class="text-sm text-gray-500">How do you prefer to receive notifications?</p>
   <fieldset class="mt-4">
     <legend class="sr-only">Notification method</legend>
     <div class="space-y-4">
       <div class="flex items-center">
         <input id="email" name="notification-method" type="radio" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="email" class="ml-3 block text-sm font-medium leading-6 text-white">1-10</label>
+        <label for="email" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(0-2)years</label>
       </div>
       <div class="flex items-center">
         <input id="sms" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="sms" class="ml-3 block text-sm font-medium leading-6 text-white">11-55</label>
+        <label for="sms" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(2-3)years</label>
       </div>
       <div class="flex items-center">
         <input id="push" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="push" class="ml-3 block text-sm font-medium leading-6 text-white">60+</label>
+        <label for="push" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(more than 5)years</label>
       </div>
     </div>
   </fieldset>
 </div>
             <div class="w-full mt-14">
-      <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2" for="grid-password">
-        Company name or website (optional):
+      <label class="block uppercase tracking-wide text-blue-400  text-xs font-bold mb-2">
+          Company name or website (optional only for company's):
       </label>
       <input class="appearance-none block w-full bg-black text-gray-700 border border-gray-200
        rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic"
