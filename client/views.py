@@ -11,3 +11,6 @@ def choose_developer(request):
 
 def choose_step_2(request):
     return render(request,'client/choose-step2.html')
+
+def thinkYou(request):
+    return render(request,'client/thankYoupage.html')
