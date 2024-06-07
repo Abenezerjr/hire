@@ -1,10 +1,24 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect , HttpResponse
 
-# Create your views here.
+from . forms import ClinentForm
+
+# Create  your views here.
 
 
 def client_home(request):
-    return render(request,'client/client_home.html')
+    form=ClinentForm()
+    if request.method=='POST':
+        form=ClinentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('choose_step_2')
+        else:
+            print('error occure')
+
+    context={
+        'form':form
+    }
+    return render(request,'client/client_home.html',context)
 
 def choose_developer(request):
     return render(request,'client/choose.html')
