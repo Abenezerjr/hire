@@ -1,6 +1,7 @@
 from django.db import models
 import uuid
 from phonenumber_field.modelfields import PhoneNumberField
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 
@@ -10,6 +11,10 @@ class Client(models.Model):
     phonenumber=PhoneNumberField(null=False,blank=False,unique=True)
 
 
+    def __str__(self):
+        return self.fullname
+
+
 
 class OCCUPATIONS(models.Model):
     client=models.ForeignKey(Client,on_delete=models.CASCADE , null=True)
@@ -17,8 +22,12 @@ class OCCUPATIONS(models.Model):
     detailes = models.TextField(null=True, blank=True)
 
 
+    def __str__(self):
+        return self.occupations
+
 
 class HireNeed(models.Model):
+    client = models.ForeignKey(Client, on_delete=models.CASCADE, null=True)
     Hiring_Needs = [
         ('oneTime', 'OneTime'),
         ('PartTime', 'PartTime'),
@@ -33,3 +42,7 @@ class HireNeed(models.Model):
     Experience=models.CharField(max_length=250,choices=Experience)
 
     web_link=models.URLField(max_length=300,null=True,blank=True)
+
+
+    def __str__(self):
+        return f"{self.client.fullname} - {self.hiring}"
