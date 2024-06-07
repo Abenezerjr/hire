@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'client',
     'developers',
+    'phonenumber_field',
 ]
 
 AUTH_USER_MODEL='account.CustomUser'
