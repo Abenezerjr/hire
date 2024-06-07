@@ -11,7 +11,7 @@ def client_home(request):
         form=ClinentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('choose_step_2')
+            return redirect('choose')
         else:
             print('error occure')
 
