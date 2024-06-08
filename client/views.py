@@ -19,7 +19,7 @@ def client_home(request):
                 email=email if email else None,
                 phonenumber=phonenumber if phonenumber else None,
             )
-            request.session['user_id'] = user.id
+            request.session['client_email'] = client_email
             return redirect('choose')
     else:
         form = ClinentForm()  # Ensure form is initialized here
@@ -58,10 +58,28 @@ def client_home(request):
     # return render(request,'client/client_home.html',context)
 
 def choose_developer(request):
-    form=OCCUPATIONSForm()
+    client_email=request.session.get('client_email')
+    if not client_email:
+        return HttpResponse('error')
+
+    client=Client.objects.get(email=client_email)
+
+    if request.method == 'POST':
+        form = OCCUPATIONSForm(request.POST)
+        if form.is_valid():
+            occupations=form.save(commit=False)
+            occupations.client=client
+            occupations.save()
+            return  redirect('choose_step_2')
+
+    else:
+        form=OCCUPATIONSForm()
+
+
 
     context={
-        'form':form
+        'form':form,
+        'client':client
     }
     return render(request,'client/choose.html',context)
 
