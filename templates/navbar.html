@@ -30,9 +30,9 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="{% url 'home' %}" class="text-sm font-semibold leading-6 text-white">Home</a>
-        <a href="{% url 'choose' %}" class="text-sm font-semibold leading-6 text-white">Expertise</a>
+        <a href="{% url 'choose_step_1' %}" class="text-sm font-semibold leading-6 text-white">choose_step_1</a>
         <a href="{% url 'developer_home' %}" class="text-sm font-semibold leading-6 text-white">For Developers</a>
-        <a href="{% url 'client_home' %}" class="text-sm font-semibold leading-6 text-white">Company</a>
+        <a href="{% url 'client' %}" class="text-sm font-semibold leading-6 text-white">Company</a>
         <a href="{% url 'choose_step_2' %}" class="text-sm font-semibold leading-6 text-white">choose_2</a>
       </div>
         {% if request.user.is_authenticated %}

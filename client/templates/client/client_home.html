@@ -29,7 +29,7 @@
 
         <div class="flex min-h-full flex-col justify-center px-6 py-4 lg:px-8">
             <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6"  method="POST">
+    <form class="space-y-6"  method="POST" >
         {% csrf_token %}
         {% for field in form %}
         {% if field.error%}
