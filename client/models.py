@@ -18,7 +18,7 @@ class Client(models.Model):
 
 class OCCUPATIONS(models.Model):
     client=models.ForeignKey(Client,on_delete=models.CASCADE , null=True)
-    occupations = models.CharField(max_length=700, null=True, blank=True)
+    occupations = models.CharField(max_length=700, null=True, blank=True,verbose_name=' Enter skills or occupations you need:')
     detailes = models.TextField(null=True, blank=True)
 
 

@@ -27,3 +27,9 @@ class OCCUPATIONSForm(ModelForm):
         fields=['occupations','detailes',]
 
 
+    def __init__(self,*args,**kwargs):
+        super(OCCUPATIONSForm,self).__init__(*args,**kwargs)
+        self.fields['occupations'].widget.attrs.update({'class':'appearance-none block w-full bg-black text-white border border-gray-200 rounded py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic','placeholder':'"python, Backend ....'})
+        self.fields['detailes'].widget.attrs.update({'class':'appearance-none block w-full bg-black text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic','placeholder':'Tell as a bit about your requesments'})
+
+
