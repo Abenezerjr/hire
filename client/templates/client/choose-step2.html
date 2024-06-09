@@ -10,68 +10,72 @@
         <form class="mt-32">
             {% csrf_token %}
 
-            {{ form }}
+            {% for field in form %}
 
-  <label class="text-base font-semibold text-white">Your hiring needs</label>
-  <p class="text-sm text-gray-500">How do you prefer to receive notifications?</p>
-  <fieldset class="mt-4">
-    <legend class="sr-only">Notification method</legend>
-    <div class="space-y-4">
-      <div class="flex items-center">
-        <input id="One" name="notification-method" type="checkbox" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="One" class="ml-3 block text-sm font-medium leading-6 text-white">One time</label>
-      </div>
-      <div class="flex items-center">
-        <input id="Part" name="notification-method" type="checkbox" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="Part" class="ml-3 block text-sm font-medium leading-6 text-white">Part Time</label>
-      </div>
-      <div class="flex items-center">
-        <input id="Full" name="notification-method" type="checkbox" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="Full" class="ml-3 block text-sm font-medium leading-6 text-white">Full time</label>
-      </div>
-    </div>
-  </fieldset>
-<div class="mt-14">
-              <label class="text-base font-semibold text-white">Experience Requirement ?</label>
-  <p class="text-sm text-gray-500">How do you prefer to receive notifications?</p>
-  <fieldset class="mt-4">
-    <legend class="sr-only">Notification method</legend>
-    <div class="space-y-4">
-      <div class="flex items-center">
-        <input id="zero" name="notification-method" type="radio" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="zero" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(0-2)years</label>
-      </div>
-      <div class="flex items-center">
-        <input id="two" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="two" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(2-5)years</label>
-      </div>
-      <div class="flex items-center">
-        <input id="more" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-        <label for="more" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(more than 5)years</label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-            <div class="w-full mt-14">
-      <label class="block uppercase tracking-wide text-blue-400  text-xs font-bold mb-2">
-          Company name or website (optional only for company's):
-      </label>
-      <input class="appearance-none block w-full bg-black text-gray-700 border border-gray-200
-       rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic"
-             id="grid-password" type="text">
-     </div>
-                <div class="mt-4 ml-2 flex items-center justify-start gap-x-6">
-            <button
-              type="submit"
-              class="rounded-md bg-indigo-500 px-3.5 py-2.5
-                         text-sm font-semibold text-white shadow-sm
-                          hover:bg-indigo-400 focus-visible:outline
-                          focus-visible:outline-2
-                          focus-visible:outline-offset-2
-                          focus-visible:outline-indigo-400">
-                submite
-            </button>
-          </div>
+                {{ field }}
+
+            {% endfor %}
+
+{#  <label class="text-base font-semibold text-white">Your hiring needs</label>#}
+{#  <p class="text-sm text-gray-500">How do you prefer to receive notifications?</p>#}
+{#  <fieldset class="mt-4">#}
+{#    <legend class="sr-only">Notification method</legend>#}
+{#    <div class="space-y-4">#}
+{#      <div class="flex items-center">#}
+{#        <input id="One" name="notification-method" type="checkbox" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">#}
+{#        <label for="One" class="ml-3 block text-sm font-medium leading-6 text-white">One time</label>#}
+{#      </div>#}
+{#      <div class="flex items-center">#}
+{#        <input id="Part" name="notification-method" type="checkbox" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">#}
+{#        <label for="Part" class="ml-3 block text-sm font-medium leading-6 text-white">Part Time</label>#}
+{#      </div>#}
+{#      <div class="flex items-center">#}
+{#        <input id="Full" name="notification-method" type="checkbox" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">#}
+{#        <label for="Full" class="ml-3 block text-sm font-medium leading-6 text-white">Full time</label>#}
+{#      </div>#}
+{#    </div>#}
+{#  </fieldset>#}
+{#<div class="mt-14">#}
+{#              <label class="text-base font-semibold text-white">Experience Requirement ?</label>#}
+{#  <p class="text-sm text-gray-500">How do you prefer to receive notifications?</p>#}
+{#  <fieldset class="mt-4">#}
+{#    <legend class="sr-only">Notification method</legend>#}
+{#    <div class="space-y-4">#}
+{#      <div class="flex items-center">#}
+{#        <input id="zero" name="notification-method" type="radio" checked class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">#}
+{#        <label for="zero" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(0-2)years</label>#}
+{#      </div>#}
+{#      <div class="flex items-center">#}
+{#        <input id="two" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">#}
+{#        <label for="two" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(2-5)years</label>#}
+{#      </div>#}
+{#      <div class="flex items-center">#}
+{#        <input id="more" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">#}
+{#        <label for="more" class="ml-3 block text-sm font-medium leading-6 text-white">Experience(more than 5)years</label>#}
+{#      </div>#}
+{#    </div>#}
+{#  </fieldset>#}
+{#</div>#}
+{#            <div class="w-full mt-14">#}
+{#      <label class="block uppercase tracking-wide text-blue-400  text-xs font-bold mb-2">#}
+{#          Company name or website (optional only for company's):#}
+{#      </label>#}
+{#      <input class="appearance-none block w-full bg-black text-gray-700 border border-gray-200#}
+{#       rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic"#}
+{#             id="grid-password" type="text">#}
+{#     </div>#}
+{#                <div class="mt-4 ml-2 flex items-center justify-start gap-x-6">#}
+{#            <button#}
+{#              type="submit"#}
+{#              class="rounded-md bg-indigo-500 px-3.5 py-2.5#}
+{#                         text-sm font-semibold text-white shadow-sm#}
+{#                          hover:bg-indigo-400 focus-visible:outline#}
+{#                          focus-visible:outline-2#}
+{#                          focus-visible:outline-offset-2#}
+{#                          focus-visible:outline-indigo-400">#}
+{#                submite#}
+{#            </button>#}
+{#          </div>#}
 
          </form>
 		<div class="flex items-center justify-center p-6 mt-16 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
@@ -79,6 +83,25 @@
 		</div>
 	</div>
 </section>
+
+
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const radios = document.querySelectorAll('h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600 input[type="radio"]');
+            radios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    radios.forEach(r => {
+                        if (r !== radio) {
+                            r.parentNode.querySelector('label').classList.remove('selected');
+                        }
+                    });
+                    if (radio.checked) {
+                        radio.parentNode.querySelector('label').classList.add('selected');
+                    }
+                });
+            });
+        });
+    </script>
 
 
 {% endblock %}

@@ -38,7 +38,14 @@ class OCCUPATIONSForm(ModelForm):
 class HireNeedForm(ModelForm):
     class Meta:
         model=HireNeed
-        fields='__all__'
+        fields=['hiring','Experience']
+        widgets={
+            'hiring':forms.RadioSelect(),
+            'Experience':forms.RadioSelect()
+
+        }
+
+
 
 
 
