@@ -86,23 +86,5 @@
 </section>
 
 
-       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const radios = document.querySelectorAll('h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600 input[type="radio"]');
-            radios.forEach(radio => {
-                radio.addEventListener('change', function() {
-                    radios.forEach(r => {
-                        if (r !== radio) {
-                            r.parentNode.querySelector('label').classList.remove('selected');
-                        }
-                    });
-                    if (radio.checked) {
-                        radio.parentNode.querySelector('label').classList.add('selected');
-                    }
-                });
-            });
-        });
-    </script>
-
 
 {% endblock %}
