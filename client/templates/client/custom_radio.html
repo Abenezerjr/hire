@@ -1,0 +1,18 @@
+{% for group, options, index in widget.optgroups %}
+    {% for option in options %}
+       <div class="container flex flex-col justify-center px-12 mx-auto sm:py-4 lg:py-4 lg:flex-row lg:justify-between">
+  <fieldset class="mt-4 text-white">
+    <legend class="sr-only">{{ option.legend }}</legend>
+               <div class="space-y-4">
+      <div class="flex items-center">
+            <input type="radio" id="{{ option.id_for_label }}" name="{{ widget.name }}" value="{{ option.value }}" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600" {% if option.selected %}checked{% endif %} {% include "django/forms/widgets/attrs.html" %}>
+            <label for="{{ option.id_for_label }}" class="ml-3 block text-sm font-medium leading-6 text-white">
+                {{ option.label }}
+            </label>
+        </div>
+               </div>
+  </fieldset>
+       </div>
+
+    {% endfor %}
+{% endfor %}

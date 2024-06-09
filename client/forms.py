@@ -2,6 +2,7 @@ from django import forms
 
 from  django.forms import ModelForm
 from .models import Client,OCCUPATIONS,HireNeed
+from .TailwindRadioSelect import TailwindRadioSelect
 
 class ClinentForm(ModelForm):
     class Meta:
@@ -40,8 +41,8 @@ class HireNeedForm(ModelForm):
         model=HireNeed
         fields=['hiring','Experience']
         widgets={
-            'hiring':forms.RadioSelect(),
-            'Experience':forms.RadioSelect()
+            'hiring':TailwindRadioSelect(),
+            'Experience':TailwindRadioSelect()
 
         }
 
