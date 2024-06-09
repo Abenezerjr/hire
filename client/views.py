@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect , HttpResponse
 
-from . forms import ClinentForm ,OCCUPATIONSForm
+from . forms import ClinentForm ,OCCUPATIONSForm ,HireNeedForm
 from .models import Client
 # Create  your views here.
 
@@ -150,7 +150,13 @@ def choose_developer(request):
     return render(request, 'client/choose.html', context)
 
 def choose_step_2(request):
-    return render(request,'client/choose-step2.html')
+    form=HireNeedForm()
+
+    context={
+        'form':form
+    }
+
+    return render(request,'client/choose-step2.html',context)
 
 def thinkYou(request):
     return render(request,'client/thankYoupage.html')
