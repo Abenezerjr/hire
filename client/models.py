@@ -45,4 +45,4 @@ class HireNeed(models.Model):
 
 
     def __str__(self):
-        return f"{self.client.fullname} - {self.hiring}"
+        return f"{self.client.fullname} - {self.hiring} -{self.Experience}"

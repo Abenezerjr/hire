@@ -124,6 +124,7 @@ def client_home(request):
 #     return render(request,'client/choose.html',context)
 
 def choose_developer(request):
+    # form=None
     client_email = request.session.get('client_email')
     if not client_email:
         return HttpResponse('Error because we cannot reach the client.')
@@ -150,6 +151,7 @@ def choose_developer(request):
     return render(request, 'client/choose.html', context)
 
 def choose_step_2(request):
+    # form=HireNeedForm()
     client_email = request.session.get('client_email')
     if not client_email:
         return HttpResponse('Error because we cannot reach the client.')
@@ -159,12 +161,23 @@ def choose_step_2(request):
     except Client.DoesNotExist:
         return HttpResponse('Error because the client does not exist.')
 
+    if request.method == 'POST':
+        form=HireNeedForm(request.POST)
+        if form.is_valid():
+            hireneed=form.save(commit=False)
+            hireneed.client=client
+            hireneed.save()
+            return redirect('thinkYou')
 
-    # context={
-    #     'form':form
-    # }
-    #
-    # return render(request,'client/choose-step2.html',context)
+    else:
+        form=HireNeedForm()
+
+    context={
+        'form':form,
+        'client':client,
+    }
+
+    return render(request,'client/choose-step2.html',context)
 
 def thinkYou(request):
     return render(request,'client/thankYoupage.html')
