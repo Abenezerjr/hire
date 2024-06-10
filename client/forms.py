@@ -34,14 +34,29 @@ class OCCUPATIONSForm(ModelForm):
 
 
 class HireNeedForm(ModelForm):
+    hiring = forms.TypedChoiceField(
+        choices=HireNeed.Hiring_Needs,
+        widget=forms.RadioSelect,
+        empty_value=None
+    )
+    experience = forms.TypedChoiceField(
+        choices=HireNeed.Experiences,
+        widget=forms.RadioSelect,
+        empty_value=None
+    )
     class Meta:
         model=HireNeed
-        fields=['hiring','Experience']
+        fields=['hiring','Experience','web_link',]
         widgets={
             'hiring':TailwindRadioSelect(),
             'Experience':TailwindRadioSelect()
 
         }
+    def __init__(self,*args,**kwargs):
+        super(HireNeedForm,self).__init__(*args,**kwargs)
+        self.fields['web_link'].widget.attrs.update({'class':'appearance-none block w-full bg-black text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-900 focus:border-gray-500 italic','placeholder':'"Company name or website (optional)'})
+
+
 
 
 

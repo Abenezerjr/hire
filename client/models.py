@@ -33,13 +33,13 @@ class HireNeed(models.Model):
         ('PartTime', 'PartTime'),
         ('FullTime', 'Fulltime'),
     ]
-    Experience=[
+    Experiences=[
         ('Experience(0-2)years','Experience(0-2)years'),
         ('Experience(2-5)years','Experience(0-2)years'),
         ('Experience(more than 5)years','Experience(0-2)years'),
     ]
     hiring=models.CharField(max_length=250,choices=Hiring_Needs)
-    Experience=models.CharField(max_length=250,choices=Experience)
+    Experience=models.CharField(max_length=250,choices=Experiences)
 
     web_link=models.URLField(max_length=300,null=True,blank=True)
 
