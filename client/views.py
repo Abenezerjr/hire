@@ -150,13 +150,21 @@ def choose_developer(request):
     return render(request, 'client/choose.html', context)
 
 def choose_step_2(request):
-    form=HireNeedForm()
+    client_email = request.session.get('client_email')
+    if not client_email:
+        return HttpResponse('Error because we cannot reach the client.')
 
-    context={
-        'form':form
-    }
+    try:
+        client = Client.objects.get(email=client_email)
+    except Client.DoesNotExist:
+        return HttpResponse('Error because the client does not exist.')
 
-    return render(request,'client/choose-step2.html',context)
+
+    # context={
+    #     'form':form
+    # }
+    #
+    # return render(request,'client/choose-step2.html',context)
 
 def thinkYou(request):
     return render(request,'client/thankYoupage.html')
