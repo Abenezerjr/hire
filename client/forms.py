@@ -36,12 +36,12 @@ class OCCUPATIONSForm(ModelForm):
 class HireNeedForm(ModelForm):
     hiring = forms.TypedChoiceField(
         choices=HireNeed.Hiring_Needs,
-        widget=forms.RadioSelect,
+        widget=TailwindRadioSelect(),
         empty_value=None
     )
-    experience = forms.TypedChoiceField(
+    Experience = forms.TypedChoiceField(
         choices=HireNeed.Experiences,
-        widget=forms.RadioSelect,
+        widget=TailwindRadioSelect(),
         empty_value=None
     )
     class Meta:
