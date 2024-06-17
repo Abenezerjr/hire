@@ -181,3 +181,7 @@ def choose_step_2(request):
 
 def thinkYou(request):
     return render(request,'client/thankYoupage.html')
+
+
+def commingSoon(request):
+    return render(request,'commingSoon.html')
