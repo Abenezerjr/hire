@@ -30,11 +30,14 @@
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="{% url 'home' %}" class="text-sm font-semibold leading-6 text-white">Home</a>
-        <a href="{% url 'choose_step_1' %}" class="text-sm font-semibold leading-6 text-white">choose_step_1</a>
+{#        <a href="{% url 'choose_step_1' %}" class="text-sm font-semibold leading-6 text-white">choose_step_1</a>#}
+
         <a href="{% url 'developer_home' %}" class="text-sm font-semibold leading-6 text-white">For Developers</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white">Aboutus</a>
         <a href="{% url 'client' %}" class="text-sm font-semibold leading-6 text-white">Company</a>
-        <a href="{% url 'choose_step_2' %}" class="text-sm font-semibold leading-6 text-white">choose_2</a>
+{#        <a href="{% url 'choose_step_2' %}" class="text-sm font-semibold leading-6 text-white">choose_2</a>#}
       </div>
+     {% if request.user.is_developer == True %}
         {% if request.user.is_authenticated %}
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="{% url 'logout' %}" class="text-sm font-semibold leading-6 text-white">Log out <span aria-hidden="true">&rarr;</span></a>
@@ -45,6 +48,10 @@
         <a href="{% url 'login' %}" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></a>
       </div>
         {% endif %}
+    {% else %}
+{#        <a href="#" class="text-sm font-semibold leading-6 text-white">Start <span aria-hidden="true">&rarr;</span></a>#}
+    {% endif %}
+
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
 {#    <div class="lg:hidden mobileMenu" role="dialog" aria-modal="true">#}
