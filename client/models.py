@@ -35,8 +35,8 @@ class HireNeed(models.Model):
     ]
     Experiences=[
         ('Experience(0-2)years','Experience(0-2)years'),
-        ('Experience(2-5)years','Experience(0-2)years'),
-        ('Experience(more than 5)years','Experience(0-2)years'),
+        ('Experience(2-5)years','Experience(2-5)years'),
+        ('Experience(more than 5)years','Experience(more than 5)years'),
     ]
     hiring=models.CharField(max_length=250,choices=Hiring_Needs)
     Experience=models.CharField(max_length=250,choices=Experiences)
